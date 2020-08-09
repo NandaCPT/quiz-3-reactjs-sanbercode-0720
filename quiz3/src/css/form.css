@@ -5,26 +5,33 @@
 }
 
 .tabel {
-    margin: auto;
+    margin: 20px;
     text-align: center;
-    font-size: 24px;
+    font-size: 18px;
     border-collapse: collapse;
     border: 3px solid black;
-    background-color: #ff7f50;
+    background-color: white;
     width: 100%;
   }
   
   .tabel td, .tabel th {
     border: 1px solid white;
     padding: 5px;
+    height: 50px;
+    width: fit-content;
   }
   
   .tabel th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    background-color: #ddd;
+    background-color:blue;
     color: black;
+    height: 50px;
+  }
+
+  .tabel tr:nth-child(even){
+    background-color: lightblue;
   }
 
 .tambahData {
@@ -32,6 +39,7 @@
   text-align: center;
   width: 640px;
   border: 1px solid black;
+  font-size: 24px;
 }
 
 button {
@@ -39,6 +47,10 @@ button {
   font-size: 18px;
   border-radius: 10px;
   margin: 8px;
+}
+
+button:hover {
+  background-color: red;
 }
 
 input[type=text] {

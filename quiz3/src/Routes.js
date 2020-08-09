@@ -4,6 +4,10 @@ import IndexPage from './IndexPage';
 import AboutPage from './AboutPage';
 import logo from './css/logo.png';
 import MovieListEditor from './MovieListEditor';
+import PrivateRoute from './PrivateRoute';
+import LoginPage from './LoginPage';
+import LogoutPage from './LogoutPage';
+
 
 const Routes = () => {
 
@@ -16,14 +20,17 @@ const Routes = () => {
               <li><Link to = '/'> Home </Link> </li>
               <li><Link to = '/about'> About </Link> </li>
               <li><Link to = '/editor'> Editor </Link> </li>
-              <li><Link to = '/'> Login </Link> </li>
+              <li><Link to = '/LogoutPage'> Logout </Link> </li>
             </ul>
           </nav>
         </header>
 
         <Switch>
           <Route path='/about' component={AboutPage}></Route>
-          <Route path='/editor' component={MovieListEditor}></Route>
+          <PrivateRoute path='/editor' component={MovieListEditor}></PrivateRoute>
+          <Route path='/about' component={AboutPage}></Route>
+          <Route path='/login' component={LoginPage}></Route>
+          <Route path='/LogoutPage' component={LogoutPage}></Route>
           <Route path="/" component={IndexPage}/>
         </Switch>
         </div>
